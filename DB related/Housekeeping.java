@@ -1,7 +1,5 @@
-package com.example.jeongeunlee.database_home;
-
 /**
- * Housekeeping class object to pass User info entity
+ * Housekeeping class object to pass Housekeeping info entity
  *
  */
 
@@ -21,6 +19,5 @@ public class Housekeeping {
         this.type = type;
         this.comment = comment;
         this.date = date;
-    } // end of default Housekeeping constructor
-
+    } // end of Housekeeping constructor
 } // end of Housekeeping class

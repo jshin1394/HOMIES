@@ -1,7 +1,5 @@
-package com.example.jeongeunlee.database_home;
-
 /**
- * Event class object to pass User info entity
+ * Event class object to pass Event info entity
  *
  */
 

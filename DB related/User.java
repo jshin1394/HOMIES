@@ -1,5 +1,3 @@
-package com.example.jeongeunlee.database_home;
-
 /**
  * User class object to pass User info entity
  *
@@ -13,8 +11,7 @@ public class User {
     private String DOB;
 
     public User() {
-            // Default constructor required for calls to DataSnapshot.getValue(User.class)
-    }
+    } // end of default User constructor
 
     public User(String username, String email, String fname, String lname, String DOB) {
         this.username = username;
@@ -22,5 +19,6 @@ public class User {
         this.fname = fname;
         this.lname = lname;
         this.DOB = DOB;
-    }
-}
+    } // end of User constructor
+
+} // end of User class

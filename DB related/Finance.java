@@ -1,7 +1,5 @@
-package com.example.jeongeunlee.database_home;
-
 /**
- * Finance class object to pass User info entity
+ * Finance class object to pass Finance info entity
  *
  */
 
@@ -22,5 +20,4 @@ public class Finance {
         this.Date = date;
         this.Amount = amount;
     }
-
 } // end of Finance class
