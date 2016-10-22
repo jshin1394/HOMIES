@@ -30,8 +30,8 @@ public class AddHouseActivity extends AppCompatActivity { 
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);  
         setContentView(R.layout.activity_add_house);  
-        final EditText house_name = (EditText) findViewById(R.id.house_name); 
-        final EditText house_address = (EditText) findViewById(R.id.house_address);  
+        final EditText house_name = (EditText) findViewById(R.id.house_name_field); 
+        final EditText house_address = (EditText) findViewById(R.id.house_address_field);  
         ArrayList<House> houseList = new ArrayList<House>();  
         // Attach an listener to read the data at our posts reference 
         final Button button = (Button) findViewById(R.id.login); 
