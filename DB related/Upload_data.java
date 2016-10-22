@@ -1,6 +1,3 @@
-package com.example.jeongeunlee.database_home;
-
-
 import com.google.firebase.*;
 import com.google.firebase.database;
 
