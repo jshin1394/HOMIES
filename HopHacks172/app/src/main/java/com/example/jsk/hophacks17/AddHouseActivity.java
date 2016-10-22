@@ -15,15 +15,7 @@ import android.widget.TimePicker;
  * Created by JSK on 10/22/16.
  */
 
-public class AddHouseActivity {
+public class AddHouseActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        //Gets the information passed on by the previous activity.
-        Intent intent = getIntent();
-        index = intent.getIntExtra("index", -1);
-        userId = intent.getStringExtra("userId");
-        site = (Site) intent.getSerializableExtra("selectedSite");
-    }
 
 }
