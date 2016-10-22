@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -87,6 +88,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, AddHouseActivity.class);
                 intent.putExtra("Username", 32);
+                intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
             }
@@ -97,6 +99,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, DeleteHouseActivity.class);
                 intent.putExtra("Username", 32);
+                intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
             }
