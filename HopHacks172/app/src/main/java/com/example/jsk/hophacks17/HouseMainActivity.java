@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.List;
+
 /**
  * Created by JSK on 10/22/16.
  */
@@ -12,6 +14,9 @@ public class HouseMainActivity extends AppCompatActivity {
 
     private String userName;
     private int houseID;
+    private List<Member> members;
+
+    //assume we have member list for a house
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

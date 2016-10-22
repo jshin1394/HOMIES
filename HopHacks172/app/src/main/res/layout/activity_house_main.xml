@@ -3,4 +3,21 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:text="Money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/money" />
+
+    <Button
+        android:text="Chores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chore_button" />
+
+    <Button
+        android:text="Status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/state_button" />
 </LinearLayout>
