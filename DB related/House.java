@@ -3,20 +3,22 @@
  */
 
 public class House {
-    public String HouseId;
+    public String houseId;
     private String street;
     private String city;
-    private int zip;
-    private int number;
+    public String state;
+    private String zip;
+    private int numMembers;
 
     public House(){
     } // end of default House constructor
 
-    public House(String HouseID, String street, String city, int zip, int num){
-        this.HouseId = HouseID;
+    public House(String houseID, String street, String city, String state, String zip, int numMembers){
+        this.houseId = houseID;
         this.street = street;
         this.city = city;
+        this.state = state;
         this.zip = zip;
-        this.number = num;
+        this.numMembers = numMembers;
     } // end of House constructor
 } // end of House class

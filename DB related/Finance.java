@@ -8,16 +8,16 @@ public class Finance {
     public Stirng memberId;
     public String type;
     public String date;
-    public int damount;
+    public int amount;
 
     public Finance() {
-    }
+    } // end of default Finance constructor
 
     public Finance(String FID, String memberId, String type, String date, int amount) {
         this.FID = FID;
-        this.MemberId = memberId;
-        this.Type = type;
-        this.Date = date;
-        this.Amount = amount;
-    }
+        this.memberId = memberId;
+        this.type = type;
+        this.date = date;
+        this.amount = amount;
+    } // end of Finance constructor
 } // end of Finance class
