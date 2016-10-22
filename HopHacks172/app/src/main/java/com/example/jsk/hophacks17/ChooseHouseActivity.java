@@ -39,44 +39,51 @@ public class ChooseHouseActivity extends AppCompatActivity {
             houseList = (List<String>) savedInstanceState.getSerializable("houseList");
         }
 
-        if (houseList.size() >= 1) {
-            final Button button1 = (Button) findViewById(R.id.button2);
-            button1.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                    intent.putExtra("Username", 32);
-                    intent.putExtra("HouseID", 1);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+        final Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
+                intent.putExtra("Username", 32);
+                intent.putExtra("HouseID", 4);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
+                intent.putExtra("Username", 32);
+                intent.putExtra("HouseID", 4);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
+                intent.putExtra("Username", 32);
+                intent.putExtra("HouseID", 4);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        if (houseList.size() < 3) {
+            button3.setVisibility(View.GONE);
         }
 
-        if (houseList.size() >= 2) {
-            final Button button2 = (Button) findViewById(R.id.button2);
-            button2.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                    intent.putExtra("Username", 32);
-                    intent.putExtra("HouseID", 2);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+        if (houseList.size() < 2) {
+            button2.setVisibility(View.GONE);
         }
 
-        if (houseList.size() >= 3) {
-            final Button button3 = (Button) findViewById(R.id.button3);
-            button3.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                    intent.putExtra("Username", 32);
-                    intent.putExtra("HouseID", 4);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+        if (houseList.size() < 1) {
+            button1.setVisibility(View.GONE);
         }
+
 
         final Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {
