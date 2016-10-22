@@ -8,14 +8,23 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by JSK on 10/22/16.
  */
 
+
+
 public class AddHouseActivity extends AppCompatActivity { 
+
+    private List<House> houseList = new ArrayList<>();
+
     @Override 
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);  
@@ -31,7 +40,7 @@ public class AddHouseActivity extends AppCompatActivity { 
                 final String house_address_field = house_address.getText().toString();  
                 // houseList.add("123"); 
                 // houseList.add("456");  
-                Intent intent = new Intent(LoginActivity.this, ChooseHouseActivity.class); 
+                Intent intent = new Intent(AddHouseActivity.this, ChooseHouseActivity.class); 
                 intent.putExtra("userName", "abc"); 
                 intent.putExtra("houseList", (Serializable) houseList); 
                 startActivity(intent); 
