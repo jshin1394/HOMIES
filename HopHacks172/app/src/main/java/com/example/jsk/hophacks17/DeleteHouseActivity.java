@@ -15,7 +15,7 @@ import android.widget.TimePicker;
  * Created by JSK on 10/22/16.
  */
 
-public class DeleteHouseActivity {
+public class DeleteHouseActivity extends AppCompatActivity {
 
 
 }
