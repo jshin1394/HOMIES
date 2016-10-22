@@ -13,7 +13,7 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+ //   private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
     private List<String> houseList;
 
@@ -48,10 +48,9 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Attach an listener to read the data at our posts reference
-        final Button button = (Button) findViewById(R.id.register);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button button2 = (Button) findViewById(R.id.register);
+        button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();

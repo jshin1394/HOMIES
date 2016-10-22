@@ -2,9 +2,10 @@ package com.example.jsk.hophacks17;
 
 import com.google.firebase.*;
 
-/**
+*
  * Created by JeongeunLee on 10/22/16.
- */
+
+
 
 public class Upload_data {
     private DatabaseReference mDatabase;
