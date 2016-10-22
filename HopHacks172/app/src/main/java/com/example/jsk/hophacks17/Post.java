@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * Post class object to pass Post info entity
  *

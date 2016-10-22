@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * Comment class object to pass Comment info entity
  *

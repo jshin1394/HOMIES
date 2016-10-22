@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * Member class object to pass Member info entity
  *
@@ -7,7 +9,7 @@ public class Member {
     public String memberId;
     public String username;
     public String houseId;
-    public Stirng status;
+    public String status;
 
     public Member() {
     } // end of default Member constructor

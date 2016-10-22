@@ -1,5 +1,6 @@
+package com.example.jsk.hophacks17;
+
 import com.google.firebase.*;
-import com.google.firebase.database;
 
 /**
  * Created by JeongeunLee on 10/22/16.

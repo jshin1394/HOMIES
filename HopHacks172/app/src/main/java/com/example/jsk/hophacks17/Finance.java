@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * Finance class object to pass Finance info entity
  *
@@ -5,7 +7,7 @@
 
 public class Finance {
     public String FID;
-    public Stirng memberId;
+    public String memberId;
     public String type;
     public String date;
     public int amount;

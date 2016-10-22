@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * User class object to pass User info entity
  *

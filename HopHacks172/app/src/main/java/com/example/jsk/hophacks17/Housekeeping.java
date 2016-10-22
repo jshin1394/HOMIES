@@ -13,9 +13,9 @@ public class Housekeeping {
     public Housekeeping() {
     } // end of default Housekeeping constructor
 
-    public Housekeeping(Stirng HKID, String memberId, String type, String detail, String date) {
+    public Housekeeping(String HKID, String memberId, String type, String detail, String date) {
         this.HKID = HKID;
-        this.memberID = memberID;
+        this.memberId = memberId;
         this.type = type;
         this.detail = detail;
         this.date = date;

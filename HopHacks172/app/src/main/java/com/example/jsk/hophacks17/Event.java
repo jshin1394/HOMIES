@@ -1,3 +1,5 @@
+package com.example.jsk.hophacks17;
+
 /**
  * Event class object to pass Event info entity
  *
@@ -12,7 +14,7 @@ public class Event {
     public Event() {
     } // end of default Event constructor
 
-    public Event(Stirng EID, String memberId, String title, String date) {
+    public Event(String EID, String memberId, String title, String date) {
         this.EID = EID;
         this.memberId = memberId;
         this.title = title;
