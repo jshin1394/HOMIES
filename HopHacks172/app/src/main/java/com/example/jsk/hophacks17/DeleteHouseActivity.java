@@ -49,6 +49,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
         final Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                houseList.remove(0);
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
@@ -62,6 +63,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
         final Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                houseList.remove(1);
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
@@ -75,6 +77,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
         final Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                houseList.remove(2);
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
@@ -94,18 +97,5 @@ public class DeleteHouseActivity extends AppCompatActivity {
             button2.setVisibility(View.GONE);
         }
 
-        // Attach an listener to read the data at our posts reference
-        final Button button = (Button) findViewById(R.id.login);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // houseList.add("123");
-                // houseList.add("456");
-                Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
-                intent.putExtra("userName", "abc");
-                intent.putExtra("houseList", (Serializable) houseList);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 }
