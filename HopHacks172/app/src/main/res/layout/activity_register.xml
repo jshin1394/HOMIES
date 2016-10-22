@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:ems="10"
+        android:id="@+id/fname_field" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Last Name"
+        android:ems="10"
+        android:id="@+id/lname_field" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email/UserID"
+        android:ems="10"
+        android:id="@+id/email_field" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:ems="10"
+        android:id="@+id/password_field" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="Date of Birth (MMDDYYYY)"
+        android:ems="10"
+        android:id="@+id/DOB_field" />
+
+    <CheckBox
+        android:text="I agree with the terms."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/agree" />
+
+    <Button
+        android:text="Sign me up!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register" />
+</LinearLayout>

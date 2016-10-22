@@ -47,6 +47,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Attach an listener to read the data at our posts reference
+        final Button button = (Button) findViewById(R.id.register);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
 }

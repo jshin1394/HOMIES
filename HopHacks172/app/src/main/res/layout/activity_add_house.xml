@@ -9,7 +9,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/house_name" />
+        android:id="@+id/house_name_field" />
 
     <EditText
         android:layout_width="match_parent"
@@ -17,5 +17,5 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/house_address" />
+        android:id="@+id/house_address_field" />
 </LinearLayout>
