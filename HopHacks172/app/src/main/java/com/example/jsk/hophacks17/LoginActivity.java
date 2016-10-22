@@ -13,6 +13,8 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
     private List<String> houseList;
 
     @Override
