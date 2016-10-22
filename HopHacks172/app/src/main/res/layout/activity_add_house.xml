@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="House Name"
         android:ems="10"
         android:id="@+id/house_name" />
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="House Address"
         android:ems="10"
         android:id="@+id/house_address" />
 

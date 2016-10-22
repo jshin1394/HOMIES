@@ -18,7 +18,7 @@ import java.util.List;
 public class ChooseHouseActivity extends AppCompatActivity {
 
     private String userName;
-    private List<String> houseList;
+    private List<House> houseList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,14 +33,17 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 houseList = null;
             } else {
                 userName = extras.getString("userName");
-                houseList = (List<String>) extras.getSerializable("houseList");
+                houseList = (List<House>) extras.getSerializable("houseList");
             }
         } else {
             userName = savedInstanceState.getString("userName");
-            houseList = (List<String>) savedInstanceState.getSerializable("houseList");
+            houseList = (List<House>) savedInstanceState.getSerializable("houseList");
         }
 
-        final Button button1 = (Button) findViewById(R.id.button1);
+        final Button button1 = (Button) findViewById(R.id.home1);
+        if(houseList.get(0) != null) {
+            button1.setText(houseList.get(0).getHouseId());
+        }
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, ChooseHouseActivity.class);
@@ -51,7 +54,10 @@ public class ChooseHouseActivity extends AppCompatActivity {
             }
         });
 
-        final Button button2 = (Button) findViewById(R.id.button2);
+        final Button button2 = (Button) findViewById(R.id.home2);
+        if(houseList.get(1) != null) {
+            button2.setText(houseList.get(1).getHouseId());
+        }
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
@@ -62,7 +68,10 @@ public class ChooseHouseActivity extends AppCompatActivity {
             }
         });
 
-        final Button button3 = (Button) findViewById(R.id.button3);
+        final Button button3 = (Button) findViewById(R.id.home3);
+        if(houseList.get(2) != null) {
+            button3.setText(houseList.get(2).getHouseId());
+        }
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
@@ -83,7 +92,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
 
 
 
-        final Button button4 = (Button) findViewById(R.id.button4);
+        final Button button4 = (Button) findViewById(R.id.add_house);
         button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, AddHouseActivity.class);
@@ -94,7 +103,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
             }
         });
 
-        final Button button5 = (Button) findViewById(R.id.button5);
+        final Button button5 = (Button) findViewById(R.id.remove_house);
         button5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, DeleteHouseActivity.class);

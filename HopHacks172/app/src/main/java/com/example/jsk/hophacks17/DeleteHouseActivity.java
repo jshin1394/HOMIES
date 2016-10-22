@@ -47,6 +47,9 @@ public class DeleteHouseActivity extends AppCompatActivity {
         }
 
         final Button button1 = (Button) findViewById(R.id.button1);
+        if(houseList.get(0) != null) {
+            button1.setText(houseList.get(0).getHouseId());
+        }
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 houseList.remove(0);
@@ -61,6 +64,9 @@ public class DeleteHouseActivity extends AppCompatActivity {
         });
 
         final Button button2 = (Button) findViewById(R.id.button2);
+        if(houseList.get(1) != null) {
+            button2.setText(houseList.get(1).getHouseId());
+        }
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 houseList.remove(1);
@@ -75,6 +81,9 @@ public class DeleteHouseActivity extends AppCompatActivity {
         });
 
         final Button button3 = (Button) findViewById(R.id.button3);
+        if(houseList.get(2) != null) {
+            button3.setText(houseList.get(2).getHouseId());
+        }
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 houseList.remove(2);
