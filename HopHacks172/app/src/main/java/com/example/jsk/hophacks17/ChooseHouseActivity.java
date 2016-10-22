@@ -42,7 +42,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
         final Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
+                Intent intent = new Intent(ChooseHouseActivity.this, ChooseHouseActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
                 startActivity(intent);
@@ -80,9 +80,6 @@ public class ChooseHouseActivity extends AppCompatActivity {
             button2.setVisibility(View.GONE);
         }
 
-        if (houseList.size() < 1) {
-            button1.setVisibility(View.GONE);
-        }
 
 
         final Button button4 = (Button) findViewById(R.id.button4);
@@ -104,5 +101,14 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        if (houseList.size() < 1) { //get rid of delete button if no houses
+            button5.setVisibility(View.GONE);
+            button1.setVisibility(View.GONE);
+        }
+
+        if (houseList.size() == 3) { //get rid of add button if 3 houses
+            button4.setVisibility(View.GONE);
+        }
     }
 }

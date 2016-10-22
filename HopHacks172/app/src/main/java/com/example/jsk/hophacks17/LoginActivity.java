@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String login_email = login_email_field.getText().toString();
                 final String login_password = login_password_field.getText().toString();
 
-                houseList.add("123");
+                houseList.add("123"); //
                 houseList.add("456");
 
                 Intent intent = new Intent(LoginActivity.this, ChooseHouseActivity.class);

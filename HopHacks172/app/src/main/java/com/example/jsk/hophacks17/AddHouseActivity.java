@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by JSK on 10/22/16.
@@ -38,6 +39,10 @@ public class AddHouseActivity extends AppCompatActivity { 
             public void onClick(View v) {  
                 final String house_name_field = house_name.getText().toString(); 
                 final String house_address_field = house_address.getText().toString();  
+                //search house, and add with the housenamefield and houseaddressfield.
+
+                //modify the houselist accordingly, and the putextra will send correct dat to choosehouseactivity.
+
                 // houseList.add("123"); 
                 // houseList.add("456");  
                 Intent intent = new Intent(AddHouseActivity.this, ChooseHouseActivity.class); 

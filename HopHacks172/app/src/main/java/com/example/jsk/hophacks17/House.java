@@ -17,4 +17,16 @@ public class House {
         this.address = address;
         this.numMembers = numMembers;
     } // end of House constructor
+
+    public String getHouseId() {
+        return this.houseId;
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+
+    public int getNumMembers() {
+        return this.numMembers;
+    }
 } // end of House class
