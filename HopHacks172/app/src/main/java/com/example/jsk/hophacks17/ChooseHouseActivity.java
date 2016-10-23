@@ -20,6 +20,10 @@ public class ChooseHouseActivity extends AppCompatActivity {
 
     private String userName;
     private List<House> houseList;
+<<<<<<< HEAD
+=======
+    private List<Double> amounts;
+>>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
     private List<Member> members;
 
     @Override
@@ -41,7 +45,6 @@ public class ChooseHouseActivity extends AppCompatActivity {
             userName = savedInstanceState.getString("userName");
             houseList = (List<House>) savedInstanceState.getSerializable("houseList");
         }
-
 
         members = new ArrayList<>();
         members.add(new Member("222721a", "jshin49", "2727", 2, 15.20));
@@ -75,6 +78,10 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
+<<<<<<< HEAD
+=======
+                intent.putExtra("amounts", (Serializable) amounts);
+>>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
@@ -91,6 +98,10 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
+<<<<<<< HEAD
+=======
+                intent.putExtra("amounts", (Serializable) amounts);
+>>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
@@ -113,6 +124,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, AddHouseActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -124,6 +136,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, DeleteHouseActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }

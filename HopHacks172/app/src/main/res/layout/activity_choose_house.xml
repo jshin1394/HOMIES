@@ -24,7 +24,7 @@
 
         <Button
             android:text="Remove House"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/remove_house"
             android:layout_alignParentBottom="true"
@@ -33,12 +33,12 @@
 
         <Button
             android:text="Add House"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/add_house"
             android:layout_above="@+id/remove_house"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="42dp" />
+            android:layout_marginBottom="0dp" />
 
     </RelativeLayout>
 

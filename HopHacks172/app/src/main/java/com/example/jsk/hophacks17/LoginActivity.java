@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -36,8 +37,14 @@ public class LoginActivity extends AppCompatActivity {
                 final String login_id = login_email_field.getText().toString();
                 final String login_password = login_password_field.getText().toString();
 
+                //dummy login verification
+                if(!login_id.equals("jkim469") || !login_password.equals("1234")) {
+                    Toast.makeText(LoginActivity.this, "Provider status changed", Toast.LENGTH_LONG).show();
+                }
+
                 Intent intent = new Intent(LoginActivity.this, ChooseHouseActivity.class);
                 intent.putExtra("userName", login_id);
+                //dummy house to dummy user
                 intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
