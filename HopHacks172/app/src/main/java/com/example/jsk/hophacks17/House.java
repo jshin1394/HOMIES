@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 public class House implements Serializable {
     public String houseId;
-    private String address;
-    private int numMembers;
+    public String address;
+    public int numMembers;
 
     public House(){
     } // end of default House constructor

@@ -8,10 +8,10 @@ package com.example.jsk.hophacks17;
 public class User {
     //public String username;
     public String email;
-    private String fname;
-    private String lname;
-    private String DOB;
-    private String password;
+    public String fname;
+    public String lname;
+    public String DOB;
+    public String password;
 
     public User() {
     } // end of default User constructor
