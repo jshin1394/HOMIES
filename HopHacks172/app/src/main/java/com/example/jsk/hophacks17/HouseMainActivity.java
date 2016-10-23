@@ -48,6 +48,7 @@ public class HouseMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, MoneyActivity.class);
                 intent.putExtra("Username", 32);
+                intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
@@ -70,6 +71,7 @@ public class HouseMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, StateActivity.class);
                 intent.putExtra("Username", 32);
+                intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
