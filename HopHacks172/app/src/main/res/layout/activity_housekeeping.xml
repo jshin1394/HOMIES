@@ -34,6 +34,10 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </TableRow>
 
+    <View android:background="#4d8321"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
