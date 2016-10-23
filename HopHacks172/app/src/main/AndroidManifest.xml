@@ -24,13 +24,13 @@
 
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/app_name"
+            android:label="REGISTER"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".ChooseHouseActivity"
-            android:label="@string/app_name"
+            android:label="HOUSES"
             android:screenOrientation="portrait">
         </activity>
 
@@ -42,55 +42,55 @@
 
         <activity
             android:name=".DeleteHouseActivity"
-            android:label="@string/app_name"
+            android:label="DELETE"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".AddHouseActivity"
-            android:label="@string/app_name"
+            android:label="ADD"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".StateActivity"
-            android:label="@string/app_name"
+            android:label="STATUS"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".MoneyActivity"
-            android:label= "HopHacks17"
+            android:label= "MONEY"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".CalendarDisplayActivity"
-            android:label="HopHacks17"
+            android:label="CALENDAR"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".EventsActivity"
-            android:label="HopHacks17"
+            android:label="EVENTS"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".EventListActivity"
-            android:label="HopHacks17"
+            android:label="EVENTS"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".EditMoneyActivity"
-            android:label="@string/app_name"
+            android:label="ADD/SUBTRACT"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".HousekeepingActivity"
-            android:label="@string/app_name"
+            android:label="CHORES"
             android:screenOrientation="portrait">
         </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
