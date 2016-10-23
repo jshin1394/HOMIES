@@ -32,7 +32,7 @@
             android:id="@+id/dates"
             android:layout_width="wrap_content"
             android:animationCache="false"
-            android:datePickerMode="spinner"
+            android:datePickerMode="calendar"
             android:scrollbars="vertical"
             android:verticalScrollbarPosition="right"
             android:layout_below="@id/done"
