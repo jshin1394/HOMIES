@@ -78,10 +78,6 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
-<<<<<<< HEAD
-=======
-                intent.putExtra("amounts", (Serializable) amounts);
->>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
@@ -98,10 +94,6 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
-<<<<<<< HEAD
-=======
-                intent.putExtra("amounts", (Serializable) amounts);
->>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
