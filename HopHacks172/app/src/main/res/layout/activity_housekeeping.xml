@@ -38,7 +38,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </TableRow>
 
-    <View android:background="#CDDC39"
+    <View android:background="#f50057"
         android:layout_width = "match_parent"
         android:layout_height="1dp"/>
 
