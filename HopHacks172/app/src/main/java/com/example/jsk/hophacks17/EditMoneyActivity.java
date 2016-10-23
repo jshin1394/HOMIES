@@ -71,4 +71,15 @@ public class EditMoneyActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(EditMoneyActivity.this, MoneyActivity.class);
+        intent.putExtra("userName", userName);
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
+        startActivity(intent);
+        finish();
+    }
 }
