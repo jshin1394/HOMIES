@@ -38,8 +38,8 @@ public class LoginActivity extends AppCompatActivity {
                 final String login_password = login_password_field.getText().toString();
 
                 //dummy login verification
-                if(!login_id.equals("jkim469") || !login_id.equals("jshin49") ||
-                        !login_id.equals("jchoi100") || !login_id.equals("jlee381") ||
+                if(!(login_id.equals("jkim469") || login_id.equals("jshin49") ||
+                        login_id.equals("jchoi100") || login_id.equals("jlee381")) ||
                         !login_password.equals("1234")) {
                     Toast.makeText(LoginActivity.this, "Wrong account info", Toast.LENGTH_LONG).show();
                 } else {

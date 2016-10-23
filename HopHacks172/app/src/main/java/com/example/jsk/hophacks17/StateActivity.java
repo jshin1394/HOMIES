@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -41,5 +42,16 @@ public class StateActivity extends AppCompatActivity {
             members = (List<Member>) savedInstanceState.getSerializable("members");
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(StateActivity.this, HouseMainActivity.class);
+        intent.putExtra("userName", userName);
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
+        startActivity(intent);
+        finish();
     }
 }

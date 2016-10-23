@@ -26,9 +26,8 @@ public class HousekeepingActivity extends AppCompatActivity {
     private String userName;
     private int houseID;
     private List<Member> members;
-    private List<Double> amounts;
-    //    private List<Housekeeping> chores;
     private int[][] chores;
+    private List<List<TextView>> garaDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,18 +41,15 @@ public class HousekeepingActivity extends AppCompatActivity {
                 userName = null;
                 houseID = 0;
                 members = null;
-                amounts = null;
             } else {
                 userName = extras.getString("userName");
                 houseID = extras.getInt("houseID");
                 members = (List<Member>) extras.getSerializable("members");
-                amounts = (List<Double>) extras.getSerializable("amounts");
             }
         } else {
             userName = savedInstanceState.getString("userName");
             houseID = savedInstanceState.getInt("houseID");
             members = (List<Member>) savedInstanceState.getSerializable("members");
-            amounts = (List<Double>) savedInstanceState.getSerializable("amounts");
         }
 
         TextView name1 = (TextView) findViewById(R.id.textView1);
@@ -66,25 +62,13 @@ public class HousekeepingActivity extends AppCompatActivity {
         name3.setText(members.get(2).username);
         name4.setText(members.get(3).username);
 
-        chores = new int[4][3];
-        chores[0][0] = 4;
-        chores[0][1] = 3;
-        chores[0][2] = 2;
-        chores[1][0] = 1;
-        chores[1][1] = 5;
-        chores[1][2] = 7;
-        chores[2][0] = 2;
-        chores[2][1] = 7;
-        chores[2][2] = 2;
-        chores[3][0] = 9;
-        chores[3][1] = 12;
-        chores[3][2] = 0;
+        chores = new int[members.size()][members.get(0).chores.size()];
 
-//        chores[0] = {4,3,2};
-//        chores[1] = {1,5,7};
-//        chores[2] = {2,7,2};
-//        chores[3] = {9,12,0};
-
+        for (int i = 0; i < members.size(); i++) {
+            for (int j = 0; j < members.get(0).chores.size(); j++) {
+                chores[i][j] = members.get(i).chores.get(j);
+            }
+        }
 
         final TextView value11 = (TextView) findViewById(R.id.textView11);
         final TextView value12 = (TextView) findViewById(R.id.textView12);
@@ -104,7 +88,7 @@ public class HousekeepingActivity extends AppCompatActivity {
         List<TextView> member3 = new ArrayList<TextView>();
         List<TextView> member4 = new ArrayList<TextView>();
 
-        final List<List<TextView>> garaDatabase = (List) new ArrayList<ArrayList<TextView>>();
+        garaDatabase = (List) new ArrayList<ArrayList<TextView>>();
 
         member1.add(value11);
         member1.add(value12);
@@ -126,8 +110,6 @@ public class HousekeepingActivity extends AppCompatActivity {
         garaDatabase.add(member2);
         garaDatabase.add(member3);
         garaDatabase.add(member4);
-
-        System.out.println(garaDatabase.get(1).get(2));
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
@@ -151,11 +133,17 @@ public class HousekeepingActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 3; j++) {
+                members.get(i).chores.set(j, Integer.parseInt(garaDatabase.get(i).get(j).getText().toString()));
+            }
+        }
+
         Intent intent = new Intent(HousekeepingActivity.this, HouseMainActivity.class);
-        intent.putExtra("userName", "jkim469");
+        intent.putExtra("userName", userName);
         intent.putExtra("houseID", houseID);
         intent.putExtra("members", (Serializable) members);
-        intent.putExtra("amounts", (Serializable) amounts);
         startActivity(intent);
         finish();
     }

@@ -56,6 +56,12 @@ public class MoneyActivity extends AppCompatActivity {
         name3.setText(members.get(2).username);
         name4.setText(members.get(3).username);
 
+        System.out.println(members.get(0).username);
+        System.out.println(members.get(1).username);
+        System.out.println(members.get(2).username);
+        System.out.println(members.get(3).username);
+
+
         TextView value1 = (TextView) findViewById(R.id.textView11);
         TextView value2 = (TextView) findViewById(R.id.textView21);
         TextView value3 = (TextView) findViewById(R.id.textView31);
@@ -139,7 +145,7 @@ public class MoneyActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent intent = new Intent(MoneyActivity.this, HouseMainActivity.class);
-        intent.putExtra("userName", "jkim469");
+        intent.putExtra("userName", userName);
         intent.putExtra("houseID", houseID);
         intent.putExtra("members", (Serializable) members);
         startActivity(intent);
