@@ -1,11 +1,13 @@
 package com.example.jsk.hophacks17;
 
+import java.io.Serializable;
+
 /**
  * Member class object to pass Member info entity
  *
  */
 
-public class Member {
+public class Member implements Serializable {
     public String memberId;
     public String username;
     public String houseId;
