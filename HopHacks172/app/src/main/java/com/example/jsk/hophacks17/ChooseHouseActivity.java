@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,6 +20,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
 
     private String userName;
     private List<House> houseList;
+    private List<Member> members;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,12 @@ public class ChooseHouseActivity extends AppCompatActivity {
             houseList = (List<House>) savedInstanceState.getSerializable("houseList");
         }
 
+        members = new ArrayList<>();
+        members.add(new Member("222721a", "jshin49", "2727", 2, 15.20));
+        members.add(new Member("213772b", "jchoi100", "2727", 0, 0));
+        members.add(new Member("928173x", "jlee381", "2727", 0, 0));
+        members.add(new Member("771228l", "jkim469", "2727", 0, 0));
+
         final Button button1 = (Button) findViewById(R.id.home1);
         if(houseList.size() >= 1) {
             button1.setText(houseList.get(0).getHouseId());
@@ -48,8 +56,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -63,8 +72,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -78,8 +88,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -99,8 +110,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, AddHouseActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -110,8 +122,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseHouseActivity.this, DeleteHouseActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }

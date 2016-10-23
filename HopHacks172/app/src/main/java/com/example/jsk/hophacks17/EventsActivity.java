@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class EventsActivity extends AppCompatActivity {
-
     private String event;
     private int day;
     private int month;
