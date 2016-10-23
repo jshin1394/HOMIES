@@ -10,13 +10,13 @@ import java.util.List;
 /**
  * Created by James on 2016-10-22.
  */
+
 public class MoneyActivity extends AppCompatActivity {
 
     private String userName;
     private int houseID;
     private List<Member> members;
     private List<Double> amounts;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,8 +46,5 @@ public class MoneyActivity extends AppCompatActivity {
         amounts.add(0.00);
         amounts.add(22.10);
         amounts.add(0.50);
-
-
-
     }
 }

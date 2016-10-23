@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,6 +43,12 @@ public class HouseMainActivity extends AppCompatActivity {
             userName = savedInstanceState.getString("userName");
             houseID = savedInstanceState.getInt("houseID");
         }
+
+        members = new ArrayList<Member>();
+        members.add(new Member("222721a", "jshin49", "2727", "busy"));
+        members.add(new Member("213772b", "jchoi100", "2727", "home"));
+        members.add(new Member("928173x", "jlee381", "2727", "home"));
+        members.add(new Member("771228l", "jkim469", "2727", "home"));
 
         final Button moneyButton = (Button) findViewById(R.id.money_button);
         moneyButton.setOnClickListener(new View.OnClickListener() {
