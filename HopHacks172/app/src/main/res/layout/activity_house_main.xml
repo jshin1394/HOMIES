@@ -26,4 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/state_button" />
+
+    <Button
+        android:text="Calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendar_button" />
 </LinearLayout>
