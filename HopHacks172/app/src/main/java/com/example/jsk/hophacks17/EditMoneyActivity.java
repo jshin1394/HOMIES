@@ -71,8 +71,4 @@ public class EditMoneyActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-
 }

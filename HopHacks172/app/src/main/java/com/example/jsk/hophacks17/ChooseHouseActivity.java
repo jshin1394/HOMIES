@@ -45,8 +45,8 @@ public class ChooseHouseActivity extends AppCompatActivity {
         members = new ArrayList<>();
         members.add(new Member("222721a", "jshin49", "2727", 2, 15.20));
         members.add(new Member("213772b", "jchoi100", "2727", 0, 0));
-        members.add(new Member("928173x", "jlee381", "2727", 0, 0));
-        members.add(new Member("771228l", "jkim469", "2727", 0, 0));
+        members.add(new Member("928173x", "jlee381", "2727", 0, 5.50));
+        members.add(new Member("771228l", "jkim469", "2727", 0, 0.70));
 
         final Button button1 = (Button) findViewById(R.id.home1);
         if(houseList.size() >= 1) {

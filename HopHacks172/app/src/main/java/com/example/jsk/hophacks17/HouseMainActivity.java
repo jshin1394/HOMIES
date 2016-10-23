@@ -83,5 +83,17 @@ public class HouseMainActivity extends AppCompatActivity {
             }
         });
 
+        final Button calendarButton = (Button) findViewById(R.id.calendar_button);
+        calendarButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(HouseMainActivity.this, CalendarDisplayActivity.class);
+                intent.putExtra("userName", userName);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

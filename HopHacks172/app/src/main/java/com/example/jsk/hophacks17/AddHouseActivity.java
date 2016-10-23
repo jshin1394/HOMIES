@@ -53,7 +53,7 @@ public class AddHouseActivity extends AppCompatActivity {
                 // houseList.add("123"); 
                 // houseList.add("456");  
                 Intent intent = new Intent(AddHouseActivity.this, ChooseHouseActivity.class);
-                intent.putExtra("userName", "abc");
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
