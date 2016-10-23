@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +21,8 @@ public class StateActivity extends AppCompatActivity {
     private String userName;
     private int houseID;
     private List<Member> members;
+
+    List<RadioGroup> radioGroup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +47,56 @@ public class StateActivity extends AppCompatActivity {
             members = (List<Member>) savedInstanceState.getSerializable("members");
         }
 
+        radioGroup = new ArrayList<>();
+        radioGroup.add((RadioGroup) findViewById(R.id.radio_group1));
+        radioGroup.add((RadioGroup) findViewById(R.id.radio_group2));
+        radioGroup.add((RadioGroup) findViewById(R.id.radio_group3));
+        radioGroup.add((RadioGroup) findViewById(R.id.radio_group4));
+
+        RadioButton statusButton;
+        int[][] ids = new int[4][3];
+        ids[0][0] = R.id.home1;
+        ids[0][1] = R.id.away1;
+        ids[0][2] = R.id.busy1;
+        ids[1][0] = R.id.home2;
+        ids[1][1] = R.id.away2;
+        ids[1][2] = R.id.busy2;
+        ids[2][0] = R.id.home3;
+        ids[2][1] = R.id.away3;
+        ids[2][2] = R.id.busy3;
+        ids[3][0] = R.id.home4;
+        ids[3][1] = R.id.away4;
+        ids[3][2] = R.id.busy4;
+
+        for (int i = 0; i < radioGroup.size(); i++) {
+            statusButton = (RadioButton) findViewById(ids[i][members.get(i).status]);
+            statusButton.setChecked(true);
+        }
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+
+        for (int i = 0; i < radioGroup.size(); i++) {
+            int selectedID = radioGroup.get(i).getCheckedRadioButtonId();
+            RadioButton radioButton = (RadioButton) findViewById(selectedID);
+            final String stateString = radioButton.getText().toString();
+            int state = -1;
+            switch (stateString) {
+                case "Home":
+                    state = 0;
+                    break;
+                case "Away":
+                    state = 1;
+                    break;
+                case "Busy":
+                    state = 2;
+                    break;
+            }
+            members.get(i).status = state;
+        }
+
         Intent intent = new Intent(StateActivity.this, HouseMainActivity.class);
         intent.putExtra("userName", userName);
         intent.putExtra("houseID", houseID);

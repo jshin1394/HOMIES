@@ -57,7 +57,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
@@ -74,7 +74,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();
@@ -91,7 +91,7 @@ public class DeleteHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(DeleteHouseActivity.this, ChooseHouseActivity.class);
                 //Delete the first house from houseList of the user
                 //update houseList of the user
-                intent.putExtra("username", 32);
+                intent.putExtra("userName", userName);
                 intent.putExtra("houseList", (Serializable) houseList);
                 //update house list with this gone
                 startActivity(intent);
