@@ -12,6 +12,7 @@ import android.widget.CalendarView;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 
 public class CalendarDisplayActivity extends AppCompatActivity {
@@ -21,7 +22,9 @@ public class CalendarDisplayActivity extends AppCompatActivity {
     private int day;
     private int hour;
     private int min;
+    private String event;
     private CalendarView calendar;
+    private ArrayList<Event> events = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,21 @@ public class CalendarDisplayActivity extends AppCompatActivity {
         final Button button_c = (Button) findViewById(R.id.button_cal);
         button_c.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarDisplayActivity.this, EventsActivity.class);
+                if(events.size() == 5){
+                    Toast.makeText(CalendarDisplayActivity.this, "Maximum number of events reached", Toast.LENGTH_LONG).show();
+                }else {
+                    Intent intent = new Intent(CalendarDisplayActivity.this, EventsActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
+
+        final Button button_v = (Button) findViewById(R.id.button_view);
+        button_v.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarDisplayActivity.this, EventListActivity.class);
+                intent.putExtra("eventlist", (Serializable)events);
                 startActivity(intent);
                 finish();
             }
@@ -51,17 +68,19 @@ public class CalendarDisplayActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if (extras == null) {
-                year= 0;
-                month= 0;
+                year = 0;
+                month = 0;
                 day = 0;
                 hour = 0;
                 min = 0;
+                event = null;
             } else {
                 year = extras.getInt("year");
                 month = extras.getInt("month");
                 day = extras.getInt("day");
                 hour = extras.getInt("hour");
                 min = extras.getInt("min");
+                event = extras.getString("event");
             }
         } else {
             year = savedInstanceState.getInt("year");
@@ -71,8 +90,23 @@ public class CalendarDisplayActivity extends AppCompatActivity {
             min = savedInstanceState.getInt("min");
         } //get all info from EventsActivity
 
-
+        addEvent();
     } //end of onCreatee
+
+    public void addEvent(){
+        Event e = new Event(event, year, month, day, hour, min);
+        events.add(e); //add an event object into an arraylist
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(CalendarDisplayActivity.this, HouseMainActivity.class);
+        intent.putExtra("events", (Serializable)events );
+        startActivity(intent);
+        finish();
+    }
+
 
 
 }

@@ -6,19 +6,25 @@ package com.example.jsk.hophacks17;
  */
 
 public class Event {
-    public String EID;
-    public String memberId;
-    public String title;
-    public String date;
+    public String Ename;
+    public int Year;
+    public int Month;
+    public int DoMonth;
+    public int hour;
+    public int min;
     
     public Event() {
     } // end of default Event constructor
 
-    public Event(String EID, String memberId, String title, String date) {
-        this.EID = EID;
-        this.memberId = memberId;
-        this.title = title;
-        this.date = date;
+    public Event(String Ename, int Year, int Month, int DoMonth, int hour, int min) {
+        this.Ename = Ename;
+        this.Year = Year;
+        this.Month = Month;
+        this.DoMonth = DoMonth;
+        this.hour = hour;
+        this.min = min;
     } // end of Event constructor
+
+
 
 } // end of Event class
