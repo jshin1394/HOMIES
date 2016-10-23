@@ -21,6 +21,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
     private String userName;
     private List<House> houseList;
     private List<Double> amounts;
+    private List<Member> members;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +43,18 @@ public class ChooseHouseActivity extends AppCompatActivity {
             houseList = (List<House>) savedInstanceState.getSerializable("houseList");
         }
 
+        //dummy vars
         amounts = new ArrayList<>();
         amounts.add(15.20);
         amounts.add(0.00);
         amounts.add(22.10);
         amounts.add(0.50);
+        members = new ArrayList<Member>();
+        members.add(new Member("222721a", "jshin49", "2727", "busy"));
+        members.add(new Member("213772b", "jchoi100", "2727", "home"));
+        members.add(new Member("928173x", "jlee381", "2727", "home"));
+        members.add(new Member("771228l", "jkim469", "2727", "home"));
+        //
 
         final Button button1 = (Button) findViewById(R.id.home1);
         if(houseList.size() >= 1) {
@@ -59,6 +67,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
                 intent.putExtra("amounts", (Serializable) amounts);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -75,6 +84,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
                 intent.putExtra("amounts", (Serializable) amounts);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -91,6 +101,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
                 intent.putExtra("amounts", (Serializable) amounts);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -112,6 +123,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, AddHouseActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }
@@ -123,6 +135,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, DeleteHouseActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("houseList", (Serializable) houseList);
+                intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
             }

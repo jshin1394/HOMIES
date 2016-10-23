@@ -48,12 +48,6 @@ public class HouseMainActivity extends AppCompatActivity {
             amounts = (List<Double>) savedInstanceState.getSerializable("amounts");
         }
 
-        members = new ArrayList<Member>();
-        members.add(new Member("222721a", "jshin49", "2727", "busy"));
-        members.add(new Member("213772b", "jchoi100", "2727", "home"));
-        members.add(new Member("928173x", "jlee381", "2727", "home"));
-        members.add(new Member("771228l", "jkim469", "2727", "home"));
-
 
 
         final Button moneyButton = (Button) findViewById(R.id.money_button);
