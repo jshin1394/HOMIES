@@ -23,7 +23,6 @@ public class EditMoneyActivity extends AppCompatActivity {
     private String userName;
     private int houseID;
     private List<Member> members;
-    private List<Double> amounts;
     private int index;
 
     @Override
@@ -38,20 +37,17 @@ public class EditMoneyActivity extends AppCompatActivity {
                 userName = null;
                 houseID = 0;
                 members = null;
-                amounts = null;
                 index = -1;
             } else {
                 userName = extras.getString("userName");
                 houseID = extras.getInt("houseID");
                 members = (List<Member>) extras.getSerializable("members");
-                amounts = (List<Double>) extras.getSerializable("amounts");
                 index = extras.getInt("index");
             }
         } else {
             userName = savedInstanceState.getString("userName");
             houseID = savedInstanceState.getInt("houseID");
             members = (List<Member>) savedInstanceState.getSerializable("members");
-            amounts = (List<Double>) savedInstanceState.getSerializable("amounts");
             index = savedInstanceState.getInt("index");
         }
 
@@ -64,12 +60,11 @@ public class EditMoneyActivity extends AppCompatActivity {
         editButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Double change = Double.parseDouble(edit.getText().toString());
-                amounts.set(index, amounts.get(index) + change);
+                members.get(index).amount += change;
                 Intent intent = new Intent(EditMoneyActivity.this, MoneyActivity.class);
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
-                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }

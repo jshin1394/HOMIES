@@ -62,9 +62,9 @@ public class MoneyActivity extends AppCompatActivity {
         TextView value4 = (TextView) findViewById(R.id.textView41);
 
         value1.setText(Double.toString(members.get(0).amount));
-        value1.setText(Double.toString(members.get(1).amount));
-        value1.setText(Double.toString(members.get(2).amount));
-        value1.setText(Double.toString(members.get(3).amount));
+        value2.setText(Double.toString(members.get(1).amount));
+        value3.setText(Double.toString(members.get(2).amount));
+        value4.setText(Double.toString(members.get(3).amount));
 
         final Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,6 @@ public class MoneyActivity extends AppCompatActivity {
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
-                intent.putExtra("amounts", (Serializable) amounts);
                 intent.putExtra("index", 0);
                 startActivity(intent);
                 finish();
@@ -87,7 +86,6 @@ public class MoneyActivity extends AppCompatActivity {
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
-                intent.putExtra("amounts", (Serializable) amounts);
                 intent.putExtra("index", 1);
                 startActivity(intent);
                 finish();
@@ -101,7 +99,6 @@ public class MoneyActivity extends AppCompatActivity {
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
-                intent.putExtra("amounts", (Serializable) amounts);
                 intent.putExtra("index", 2);
                 startActivity(intent);
                 finish();
@@ -115,7 +112,6 @@ public class MoneyActivity extends AppCompatActivity {
                 intent.putExtra("userName", userName);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
-                intent.putExtra("amounts", (Serializable) amounts);
                 intent.putExtra("index", 3);
                 startActivity(intent);
                 finish();
@@ -146,7 +142,6 @@ public class MoneyActivity extends AppCompatActivity {
         intent.putExtra("userName", "jkim469");
         intent.putExtra("houseID", houseID);
         intent.putExtra("members", (Serializable) members);
-        intent.putExtra("amounts", (Serializable) amounts);
         startActivity(intent);
         finish();
     }

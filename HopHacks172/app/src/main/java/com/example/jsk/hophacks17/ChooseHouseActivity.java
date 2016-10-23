@@ -20,10 +20,6 @@ public class ChooseHouseActivity extends AppCompatActivity {
 
     private String userName;
     private List<House> houseList;
-<<<<<<< HEAD
-=======
-    private List<Double> amounts;
->>>>>>> 64939de8eba7b61a4182231d07151c139b418a75
     private List<Member> members;
 
     @Override
