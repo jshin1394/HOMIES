@@ -1,10 +1,14 @@
 package com.example.jsk.hophacks17;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,5 +71,73 @@ public class MoneyActivity extends AppCompatActivity {
         value2.setText(amounts.get(1).toString());
         value3.setText(amounts.get(2).toString());
         value4.setText(amounts.get(3).toString());
+
+        final Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MoneyActivity.this, EditMoneyActivity.class);
+                intent.putExtra("userName", 32);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MoneyActivity.this, EditMoneyActivity.class);
+                intent.putExtra("userName", 32);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MoneyActivity.this, EditMoneyActivity.class);
+                intent.putExtra("userName", 32);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final Button button4 = (Button) findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MoneyActivity.this, EditMoneyActivity.class);
+                intent.putExtra("userName", 32);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        if (members.get(0).username != userName) {
+            button1.setVisibility(View.GONE);
+        }
+
+        if (members.get(1).username != userName) {
+            button2.setVisibility(View.GONE);
+        }
+
+        if (members.get(2).username != userName) {
+            button3.setVisibility(View.GONE);
+        }
+
+        if (members.get(3).username != userName) {
+            button4.setVisibility(View.GONE);
+        }
     }
 }
