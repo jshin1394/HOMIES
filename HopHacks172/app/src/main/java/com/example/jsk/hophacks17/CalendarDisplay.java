@@ -1,3 +1,4 @@
+/*
 package com.example.jsk.hophacks17;
 
 import android.content.Intent;
@@ -24,10 +25,12 @@ public class CalendarDisplay extends AppCompatActivity {
 
     CalendarView calendar;
 
-    /**
+    */
+/**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+     *//*
+
 
     private GoogleApiClient client;
 
@@ -64,9 +67,11 @@ public class CalendarDisplay extends AppCompatActivity {
 
 
 
-    /* ATTENTION: This was auto-generated to implement the App Indexing API.
+    */
+/* ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+     *//*
+
 
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
@@ -100,3 +105,4 @@ public class CalendarDisplay extends AppCompatActivity {
         client.disconnect();
     }
 }
+*/

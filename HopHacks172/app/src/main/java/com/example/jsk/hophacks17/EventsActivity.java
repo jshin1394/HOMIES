@@ -1,3 +1,4 @@
+/*
 package com.example.jsk.hophacks17;
 
 import android.content.Intent;
@@ -18,10 +19,12 @@ import java.util.List;
 
 public class EventsActivity extends AppCompatActivity {
 
-    /**
+    */
+/**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+     *//*
+
     private GoogleApiClient client;
 
     @Override
@@ -29,7 +32,8 @@ public class EventsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addingevents);
 
-        /**
+        */
+/**
         //Get information from login page.
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -47,7 +51,8 @@ public class EventsActivity extends AppCompatActivity {
             houseID = savedInstanceState.getInt("houseID");
             members = (List<Member>) savedInstanceState.getSerializable("members");
         }
-*/
+*//*
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -68,10 +73,12 @@ public class EventsActivity extends AppCompatActivity {
     }
 
 
-    /**
+    */
+/**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+     *//*
+
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("EventsActivity Page") // TODO: Define a title for the content shown.
@@ -104,3 +111,4 @@ public class EventsActivity extends AppCompatActivity {
         client.disconnect();
     }
 }
+*/

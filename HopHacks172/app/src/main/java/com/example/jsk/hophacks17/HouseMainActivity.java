@@ -20,6 +20,7 @@ public class HouseMainActivity extends AppCompatActivity {
     private String userName;
     private int houseID;
     private List<Member> members;
+    private List<Double> amounts;
 
     //assume we have member list for a house
 
@@ -50,6 +51,12 @@ public class HouseMainActivity extends AppCompatActivity {
         members.add(new Member("928173x", "jlee381", "2727", "home"));
         members.add(new Member("771228l", "jkim469", "2727", "home"));
 
+        amounts = new ArrayList<>();
+        amounts.add(15.20);
+        amounts.add(0.00);
+        amounts.add(22.10);
+        amounts.add(0.50);
+
         final Button moneyButton = (Button) findViewById(R.id.money_button);
         moneyButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -57,6 +64,7 @@ public class HouseMainActivity extends AppCompatActivity {
                 intent.putExtra("userName", "jkim469");
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }
