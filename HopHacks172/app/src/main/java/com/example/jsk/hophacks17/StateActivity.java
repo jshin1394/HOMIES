@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -46,6 +47,16 @@ public class StateActivity extends AppCompatActivity {
             houseID = savedInstanceState.getInt("houseID");
             members = (List<Member>) savedInstanceState.getSerializable("members");
         }
+
+        TextView textView1 = (TextView) findViewById(R.id.textView1);
+        textView1.setText(members.get(0).username);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        textView2.setText(members.get(1).username);
+        TextView textView3 = (TextView) findViewById(R.id.textView3);
+        textView3.setText(members.get(2).username);
+        TextView textView4 = (TextView) findViewById(R.id.textView4);
+        textView4.setText(members.get(3).username);
+
 
         radioGroup = new ArrayList<>();
         radioGroup.add((RadioGroup) findViewById(R.id.radio_group1));
