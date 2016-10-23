@@ -1,7 +1,8 @@
 package com.example.jsk.hophacks17;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Calendar;
 
 
 public class CalendarDisplayActivity extends AppCompatActivity {
@@ -54,6 +56,7 @@ public class CalendarDisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displaycalendar);
 
+        final Calendar c1 = Calendar.getInstance();
         //Get information from login page.
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -81,6 +84,7 @@ public class CalendarDisplayActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
             }
         });
+
 
         // Attach an listener to read the data at our posts reference
         final Button button_c = (Button) findViewById(R.id.button_cal);
