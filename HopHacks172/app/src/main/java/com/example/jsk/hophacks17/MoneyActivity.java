@@ -142,4 +142,16 @@ public class MoneyActivity extends AppCompatActivity {
             button4.setVisibility(View.GONE);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(MoneyActivity.this, HouseMainActivity.class);
+        intent.putExtra("userName", "jkim469");
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
+        intent.putExtra("amounts", (Serializable) amounts);
+        startActivity(intent);
+        finish();
+    }
 }

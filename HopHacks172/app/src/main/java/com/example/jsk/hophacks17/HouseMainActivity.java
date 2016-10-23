@@ -36,13 +36,16 @@ public class HouseMainActivity extends AppCompatActivity {
             if (extras == null) {
                 userName = null;
                 houseID = 0;
+                amounts = null;
             } else {
                 userName = extras.getString("userName");
                 houseID = extras.getInt("houseID");
+                amounts = (List<Double>) extras.getSerializable("amounts");
             }
         } else {
             userName = savedInstanceState.getString("userName");
             houseID = savedInstanceState.getInt("houseID");
+            amounts = (List<Double>) savedInstanceState.getSerializable("amounts");
         }
 
         members = new ArrayList<Member>();
@@ -51,11 +54,7 @@ public class HouseMainActivity extends AppCompatActivity {
         members.add(new Member("928173x", "jlee381", "2727", "home"));
         members.add(new Member("771228l", "jkim469", "2727", "home"));
 
-        amounts = new ArrayList<>();
-        amounts.add(15.20);
-        amounts.add(0.00);
-        amounts.add(22.10);
-        amounts.add(0.50);
+
 
         final Button moneyButton = (Button) findViewById(R.id.money_button);
         moneyButton.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +73,10 @@ public class HouseMainActivity extends AppCompatActivity {
         choreButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, HousekeepingActivity.class);
-                intent.putExtra("userName", 32);
+                intent.putExtra("userName", "jkim469");
+                intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
+                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }

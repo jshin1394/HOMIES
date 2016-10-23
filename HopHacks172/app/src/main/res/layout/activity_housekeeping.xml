@@ -108,7 +108,7 @@
         android:padding="5dip" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textView3"
             android:text="Member 3"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -141,7 +141,7 @@
         android:padding="5dip" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textView4"
             android:text="Member 4"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -166,3 +166,5 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:gravity="center" />
     </TableRow>
+
+</TableLayout>

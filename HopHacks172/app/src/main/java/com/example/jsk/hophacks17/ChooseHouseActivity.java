@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,6 +20,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
 
     private String userName;
     private List<House> houseList;
+    private List<Double> amounts;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,12 @@ public class ChooseHouseActivity extends AppCompatActivity {
             houseList = (List<House>) savedInstanceState.getSerializable("houseList");
         }
 
+        amounts = new ArrayList<>();
+        amounts.add(15.20);
+        amounts.add(0.00);
+        amounts.add(22.10);
+        amounts.add(0.50);
+
         final Button button1 = (Button) findViewById(R.id.home1);
         if(houseList.size() >= 1) {
             button1.setText(houseList.get(0).getHouseId());
@@ -50,6 +58,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }
@@ -65,6 +74,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }
@@ -80,6 +90,7 @@ public class ChooseHouseActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
+                intent.putExtra("amounts", (Serializable) amounts);
                 startActivity(intent);
                 finish();
             }
