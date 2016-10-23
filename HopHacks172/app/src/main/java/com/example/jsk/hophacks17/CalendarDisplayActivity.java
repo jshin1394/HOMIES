@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CalendarDisplayActivity extends AppCompatActivity {
@@ -23,13 +24,53 @@ public class CalendarDisplayActivity extends AppCompatActivity {
     private int hour;
     private int min;
     private String event;
+    private String userName;
+    private int houseID;
+    private List<Member> members;
     private CalendarView calendar;
-    private ArrayList<Event> events = new ArrayList<>();
+
+    private int userindex;
+
+    public void getunserindex(){
+        if (members.get(0).username.equals(userName)) {
+            userindex = 0;
+        }
+
+        if (members.get(1).username.equals(userName)) {
+            userindex = 1;
+        }
+
+        if (members.get(2).username.equals(userName)) {
+            userindex = 2;
+        }
+
+        if (members.get(3).username.equals(userName)) {
+            userindex = 3;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displaycalendar);
+
+        //Get information from login page.
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null) {
+                userName = null;
+                houseID = 0;
+                members = null;
+            } else {
+                userName = extras.getString("userName");
+                houseID = extras.getInt("houseID");
+                members = (List<Member>) extras.getSerializable("members");
+            }
+        } else {
+            userName = savedInstanceState.getString("userName");
+            houseID = savedInstanceState.getInt("houseID");
+            members = (List<Member>) savedInstanceState.getSerializable("members");
+        }
 
         calendar = (CalendarView) findViewById(R.id.calendar);
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -45,7 +86,7 @@ public class CalendarDisplayActivity extends AppCompatActivity {
         final Button button_c = (Button) findViewById(R.id.button_cal);
         button_c.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(events.size() == 5){
+                if(members.get(userindex).events.size() == 5){
                     Toast.makeText(CalendarDisplayActivity.this, "Maximum number of events reached", Toast.LENGTH_LONG).show();
                 }else {
                     Intent intent = new Intent(CalendarDisplayActivity.this, EventsActivity.class);
@@ -59,7 +100,10 @@ public class CalendarDisplayActivity extends AppCompatActivity {
         button_v.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(CalendarDisplayActivity.this, EventListActivity.class);
-                intent.putExtra("eventlist", (Serializable)events);
+                intent.putExtra("userName", userName);
+                intent.putExtra("houseID", houseID);
+                intent.putExtra("members", (Serializable) members);
+                intent.putExtra("index", userindex);
                 startActivity(intent);
                 finish();
             }
@@ -95,14 +139,16 @@ public class CalendarDisplayActivity extends AppCompatActivity {
 
     public void addEvent(){
         Event e = new Event(event, year, month, day, hour, min);
-        events.add(e); //add an event object into an arraylist
+        members.get(userindex).events.add(e);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         Intent intent = new Intent(CalendarDisplayActivity.this, HouseMainActivity.class);
-        intent.putExtra("events", (Serializable)events );
+        intent.putExtra("userName", userName);
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
         startActivity(intent);
         finish();
     }

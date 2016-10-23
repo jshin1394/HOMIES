@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by JeongeunLee on 10/23/16.
@@ -26,25 +27,38 @@ public class EventListActivity extends AppCompatActivity {
     private int day;
     private int hour;
     private int min;
-    private ArrayList<Event> events;
+    private String userName;
+    private int houseID;
+    private List<Member> members;
+    private int userindex;
+    private List<Event> events;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventlist);
 
-        // Attach an listener to read the data at our posts reference
+        //Get information from login page.
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if (extras == null) {
-                events = null;
+                userName = null;
+                houseID = 0;
+                members = null;
+                userindex = 0;
             } else {
-                events = (ArrayList<Event>) extras.getSerializable("events");
+                userName = extras.getString("userName");
+                houseID = extras.getInt("houseID");
+                members = (List<Member>) extras.getSerializable("members");
+                userindex = extras.getInt("index");
             }
         } else {
-            events = (ArrayList<Event>) savedInstanceState.getSerializable("events");
-        } //get all info from EventsActivity
-
+            userName = savedInstanceState.getString("userName");
+            houseID = savedInstanceState.getInt("houseID");
+            members = (List<Member>) savedInstanceState.getSerializable("members");
+            userindex = savedInstanceState.getInt("index");
+        }
+        events = members.get(userindex).events;
         display();
     }
 

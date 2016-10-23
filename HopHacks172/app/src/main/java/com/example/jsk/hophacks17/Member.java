@@ -16,11 +16,13 @@ public class Member implements Serializable {
     public int status;
     public double amount;
     public List<Integer> chores;
+    public ArrayList<Event> events;
 
     public Member() {
     } // end of default Member constructor
 
     public Member(String memberId, String username, String houseId, int status, double amount) {
+        events = new ArrayList<>();
         this.memberId = memberId;
         this.username = username;
         this.houseId = houseId;
