@@ -1,9 +1,13 @@
+package com.example.jsk.hophacks17;
+
+import java.io.Serializable;
+
 /**
  * Housekeeping class object to pass Housekeeping info entity
  *
  */
 
-public class Housekeeping {
+public class Housekeeping implements Serializable{
     public String HKID;
     public String memberId;
     public String type;

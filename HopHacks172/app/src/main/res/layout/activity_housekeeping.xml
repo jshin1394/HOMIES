@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView0"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:text="Cleaning"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView02"
+            android:text="Trash"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView03"
+            android:text="Dishes"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="Member 1"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:text="1"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:text="2"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:text="3"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:text="Member 2"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:text="1"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:text="2"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:text="3"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="Member 3"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:text="1"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:text="2"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:text="3"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="Member 4"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:text="1"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:text="2"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:text="3"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center" />
+    </TableRow>
