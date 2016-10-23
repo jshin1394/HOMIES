@@ -33,11 +33,11 @@ public class LoginActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final String login_email = login_email_field.getText().toString();
+                final String login_id = login_email_field.getText().toString();
                 final String login_password = login_password_field.getText().toString();
 
                 Intent intent = new Intent(LoginActivity.this, ChooseHouseActivity.class);
-                intent.putExtra("userName", "abc");
+                intent.putExtra("userName", login_id);
                 intent.putExtra("houseList", (Serializable) houseList);
                 startActivity(intent);
                 finish();

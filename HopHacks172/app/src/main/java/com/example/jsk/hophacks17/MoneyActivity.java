@@ -21,7 +21,6 @@ public class MoneyActivity extends AppCompatActivity {
     private String userName;
     private int houseID;
     private List<Member> members;
-    private List<Double> amounts;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,18 +34,15 @@ public class MoneyActivity extends AppCompatActivity {
                 userName = null;
                 houseID = 0;
                 members = null;
-                amounts = null;
             } else {
                 userName = extras.getString("userName");
                 houseID = extras.getInt("houseID");
                 members = (List<Member>) extras.getSerializable("members");
-                amounts = (List<Double>) extras.getSerializable("amounts");
             }
         } else {
             userName = savedInstanceState.getString("userName");
             houseID = savedInstanceState.getInt("houseID");
             members = (List<Member>) savedInstanceState.getSerializable("members");
-            amounts = (List<Double>) savedInstanceState.getSerializable("amounts");
         }
 
 
@@ -65,10 +61,10 @@ public class MoneyActivity extends AppCompatActivity {
         TextView value3 = (TextView) findViewById(R.id.textView31);
         TextView value4 = (TextView) findViewById(R.id.textView41);
 
-        value1.setText(amounts.get(0).toString());
-        value2.setText(amounts.get(1).toString());
-        value3.setText(amounts.get(2).toString());
-        value4.setText(amounts.get(3).toString());
+        value1.setText(Double.toString(members.get(0).amount));
+        value1.setText(Double.toString(members.get(1).amount));
+        value1.setText(Double.toString(members.get(2).amount));
+        value1.setText(Double.toString(members.get(3).amount));
 
         final Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
