@@ -124,19 +124,19 @@ public class MoneyActivity extends AppCompatActivity {
             }
         });
 
-        if (members.get(0).username != userName) {
+        if (!members.get(0).username.equals(userName)) {
             button1.setVisibility(View.GONE);
         }
 
-        if (members.get(1).username != userName) {
+        if (!members.get(1).username.equals(userName)) {
             button2.setVisibility(View.GONE);
         }
 
-        if (members.get(2).username != userName) {
+        if (!members.get(2).username.equals(userName)) {
             button3.setVisibility(View.GONE);
         }
 
-        if (members.get(3).username != userName) {
+        if (!members.get(3).username.equals(userName)) {
             button4.setVisibility(View.GONE);
         }
     }

@@ -54,7 +54,7 @@ public class HouseMainActivity extends AppCompatActivity {
         moneyButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, MoneyActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", "jkim469");
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
@@ -66,7 +66,7 @@ public class HouseMainActivity extends AppCompatActivity {
         choreButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, HousekeepingActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", 32);
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
                 finish();
@@ -77,7 +77,7 @@ public class HouseMainActivity extends AppCompatActivity {
         stateButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(HouseMainActivity.this, StateActivity.class);
-                intent.putExtra("Username", 32);
+                intent.putExtra("userName", 32);
                 intent.putExtra("houseID", houseID);
                 intent.putExtra("members", (Serializable) members);
                 startActivity(intent);
