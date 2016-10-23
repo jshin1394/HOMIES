@@ -69,7 +69,7 @@ public class EventListActivity extends AppCompatActivity {
         final TextView textview4 = (TextView) findViewById(R.id.ctv4);
         final TextView textview5 = (TextView) findViewById(R.id.ctv5);
         if(events.size() == 0) {
-            textview1.setVisibility(View.GONE);
+            textview1.setText("No events!");
             textview2.setVisibility(View.GONE);
             textview3.setVisibility(View.GONE);
             textview4.setVisibility(View.GONE);
@@ -136,7 +136,9 @@ public class EventListActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent intent = new Intent(EventListActivity.this, CalendarDisplayActivity.class);
-        intent.putExtra("events", (Serializable)events );
+        intent.putExtra("userName", userName);
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
         startActivity(intent);
         finish();
     }

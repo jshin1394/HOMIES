@@ -90,6 +90,9 @@ public class CalendarDisplayActivity extends AppCompatActivity {
                     Toast.makeText(CalendarDisplayActivity.this, "Maximum number of events reached", Toast.LENGTH_LONG).show();
                 }else {
                     Intent intent = new Intent(CalendarDisplayActivity.this, EventsActivity.class);
+                    intent.putExtra("userName", userName);
+                    intent.putExtra("houseID", houseID);
+                    intent.putExtra("members", (Serializable) members);
                     startActivity(intent);
                     finish();
                 }
@@ -125,6 +128,9 @@ public class CalendarDisplayActivity extends AppCompatActivity {
                 hour = extras.getInt("hour");
                 min = extras.getInt("min");
                 event = extras.getString("event");
+                if(event != null) {
+                    addEvent();
+                }
             }
         } else {
             year = savedInstanceState.getInt("year");
@@ -132,9 +138,8 @@ public class CalendarDisplayActivity extends AppCompatActivity {
             day = savedInstanceState.getInt("day");
             hour = savedInstanceState.getInt("hour");
             min = savedInstanceState.getInt("min");
+            //addEvent();
         } //get all info from EventsActivity
-
-        addEvent();
     } //end of onCreatee
 
     public void addEvent(){

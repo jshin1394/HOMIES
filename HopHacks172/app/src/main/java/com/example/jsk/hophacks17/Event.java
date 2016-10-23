@@ -1,11 +1,13 @@
 package com.example.jsk.hophacks17;
 
+import java.io.Serializable;
+
 /**
  * Event class object to pass Event info entity
  *
  */
 
-public class Event {
+public class Event implements Serializable {
     public String Ename;
     public int Year;
     public int Month;

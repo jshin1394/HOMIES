@@ -20,18 +20,38 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class EventsActivity extends AppCompatActivity {
-    private String event;
     private int day;
     private int month;
     private int year;
     private int hour;
     private int min;
-    private Spinner spinner1, spinner2;
+    private String event;
+    private String userName;
+    private int houseID;
+    private List<Member> members;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addingevents);
+
+        //Get information from login page.
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null) {
+                userName = null;
+                houseID = 0;
+                members = null;
+            } else {
+                userName = extras.getString("userName");
+                houseID = extras.getInt("houseID");
+                members = (List<Member>) extras.getSerializable("members");
+            }
+        } else {
+            userName = savedInstanceState.getString("userName");
+            houseID = savedInstanceState.getInt("houseID");
+            members = (List<Member>) savedInstanceState.getSerializable("members");
+        }
 
         final EditText event_name = (EditText) findViewById(R.id.name);
         final DatePicker datess = (DatePicker) findViewById(R.id.dates);
@@ -63,6 +83,9 @@ public class EventsActivity extends AppCompatActivity {
         intent.putExtra("year", this.year);
         intent.putExtra("hour", this.hour);
         intent.putExtra("min", this.min);
+        intent.putExtra("userName", userName);
+        intent.putExtra("houseID", houseID);
+        intent.putExtra("members", (Serializable) members);
         startActivity(intent);
     }
 
