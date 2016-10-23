@@ -7,7 +7,7 @@
         android:text="Money"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/money" />
+        android:id="@+id/money_button" />
 
     <Button
         android:text="Chores"

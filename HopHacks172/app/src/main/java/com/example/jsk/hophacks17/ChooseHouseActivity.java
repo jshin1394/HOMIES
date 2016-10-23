@@ -41,12 +41,13 @@ public class ChooseHouseActivity extends AppCompatActivity {
         }
 
         final Button button1 = (Button) findViewById(R.id.home1);
-        if(houseList.get(0) != null) {
+        if(houseList.size() >= 1) {
             button1.setText(houseList.get(0).getHouseId());
+            System.out.println(houseList.get(0).getHouseId());
         }
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseHouseActivity.this, ChooseHouseActivity.class);
+                Intent intent = new Intent(ChooseHouseActivity.this, HouseMainActivity.class);
                 intent.putExtra("Username", 32);
                 intent.putExtra("HouseID", 4);
                 startActivity(intent);
@@ -55,8 +56,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         });
 
         final Button button2 = (Button) findViewById(R.id.home2);
-        if(houseList.get(1) != null) {
+        if(houseList.size() >= 2) {
             button2.setText(houseList.get(1).getHouseId());
+            System.out.println(houseList.get(1).getHouseId());
         }
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -69,8 +71,9 @@ public class ChooseHouseActivity extends AppCompatActivity {
         });
 
         final Button button3 = (Button) findViewById(R.id.home3);
-        if(houseList.get(2) != null) {
+        if(houseList.size() >= 3) {
             button3.setText(houseList.get(2).getHouseId());
+            System.out.println(houseList.get(2).getHouseId());
         }
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

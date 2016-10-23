@@ -15,7 +15,7 @@ public class House implements Serializable {
     } // end of default House constructor
 
     public House(String houseID, String address, int numMembers){
-        this.houseId = houseId;
+        this.houseId = houseID;
         this.address = address;
         this.numMembers = numMembers;
     } // end of House constructor

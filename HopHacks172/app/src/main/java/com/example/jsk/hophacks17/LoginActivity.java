@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
 
  //   private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
-    private List<String> houseList;
+    private List<House> houseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 final String login_email = login_email_field.getText().toString();
                 final String login_password = login_password_field.getText().toString();
-
-                houseList.add("123"); //
-                houseList.add("456");
 
                 Intent intent = new Intent(LoginActivity.this, ChooseHouseActivity.class);
                 intent.putExtra("userName", "abc");
