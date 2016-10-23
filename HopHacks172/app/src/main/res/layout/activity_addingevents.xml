@@ -1,46 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp" >
-
-    <EditText
-        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:hint="Event Name"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_height="70dp" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="96dp"
-        android:id="@+id/done"
-        android:layout_height="wrap_content"
-        android:text="Done"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
 
-    <DatePicker
-        android:id="@+id/dates"
-        android:layout_width="wrap_content"
-        android:animationCache="false"
-        android:layout_height="100dp"
-        android:layout_below="@+id/name"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:datePickerMode="spinner"/>
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:hint="Event Name"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="50dp" />
 
-    <TimePicker
-        android:id="@+id/times"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:calendarViewShown="false"
-        android:layout_below="@+id/dates"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="96dp"
+            android:id="@+id/done"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
 
-</RelativeLayout>
+        <DatePicker
+            android:id="@+id/dates"
+            android:layout_width="wrap_content"
+            android:animationCache="false"
+            android:datePickerMode="spinner"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="right"
+            android:layout_below="@id/done"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content" />
+
+        <TimePicker
+            android:id="@+id/times"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:calendarViewShown="false"
+            android:layout_below="@+id/dates"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="19dp" />
+
+    </RelativeLayout>
+</ScrollView>
